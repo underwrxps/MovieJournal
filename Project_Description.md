@@ -1,4 +1,4 @@
-# Team HC
+# Movie Journal
 ## Members
 Nate Hoffman: hoffman3@mail.uc.edu
 Zach Cunningham: cunninzy@mail.uc.edu
