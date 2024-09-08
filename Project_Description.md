@@ -1,6 +1,6 @@
 # Team HC
 ## Members
-Nate Hoffman: 
+Nate Hoffman: hoffman3@mail.uc.edu
 Zach Cunningham: cunninzy@mail.uc.edu
 
 ## Project Topic Area:
