@@ -1,7 +1,7 @@
 ## Tasklist
 
 1. Research Android development and determine which language is best suited for this project : Nate.
-2. Research what is takes to get an app onto the Andriod App Store : Zach.
+2. Research what it takes to get an app onto the Google Play Store : Zach.
 3. Design interface of the app with sketches, feedback, and a defined set of user needs : Zach.
 4. Develop a database where the user's personal information and journal entries can be stored : Nate.
 5. Develop the functionality to create a new journal entry : Nate.
