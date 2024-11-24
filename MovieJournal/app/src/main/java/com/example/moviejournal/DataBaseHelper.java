@@ -61,7 +61,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         // Our query string
-        String queryString = "DELETE FROM " + JOURNAL_TABLE + " WHERE " + COLUMN_MOVIE_NAME + " = " + journalEntry.getMovieName();
+        String queryString = String.format("DELETE FROM %s WHERE %s = '%s'", JOURNAL_TABLE, COLUMN_MOVIE_NAME, journalEntry.getMovieName());
 
         Cursor cursor = db.rawQuery(queryString, null);
 

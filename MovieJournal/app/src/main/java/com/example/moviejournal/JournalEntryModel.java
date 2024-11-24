@@ -20,11 +20,7 @@ public class JournalEntryModel {
     // toString
     @Override
     public String toString() {
-        return "JournalEntryModel{" +
-                "entryID=" + entryID +
-                ", movieName='" + movieName + '\'' +
-                ", reviewText='" + reviewText + '\'' +
-                '}';
+        return movieName;
     }
 
     public int getEntryID() {
