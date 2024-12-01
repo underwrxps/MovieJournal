@@ -25,7 +25,7 @@
 7. [PPT Slideshow](/FallDesignPresentationSlides.pdf)
 
 8. Self-Assessment Essays
-    1. [Zach Cunningham](/ZachCuningham_IndividualCapstoneAssessment.pdf)
+    1. [Zach Cunningham](/ZachCunningham_IndividualCapstoneAssessment.pdf)
     2. [Nate Hoffman](/NateHoffman_IndividualCapstoneAssessment.docx)
 
 9. Professional Biographies
