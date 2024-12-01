@@ -38,3 +38,5 @@
     
 11. Appendix
     1. [Code Repository](/MovieJournal)
+    2. Refrences
+        1. [SQLite Databse for Android - Full Course](https://www.youtube.com/watch?v=312RhjfetP8)
