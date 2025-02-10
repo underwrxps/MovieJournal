@@ -16,8 +16,8 @@ There are 4 main activities a user will be performing with MovieJournal: creatin
 
 ### Viewing an Entry
 - To view an entry, simply navigate to the “Previous Entries” list and select the movie title of the entry you would like to view. 
-- Select the ![list filter](images/list_filter.png) icon to switch between filtering modes for the list. You can choose to sort the list by date created or movie title.
-- Select the ![list search](images/list_search.png) icon to search for a movie title within the list.
+    - Select the ![list filter](images/list_filter.png) icon to switch between filtering modes for the list. You can choose to sort the list by date created or movie title.
+    - Select the ![list search](images/list_search.png) icon to search for a movie title within the list.
 - Then select the “View” option.
 The review text will then be displayed.
 
@@ -25,7 +25,7 @@ The review text will then be displayed.
 - To update an existing entry, open the app to the main screen and click on one of the entries in the “Previous Entries” list. 
 - This will launch the Edit Entry UI and allow the user to update the title and journal entry for the movie the user selected. 
 - When the user is done updating the entry, they can click the “Save Entry” button to return to the main menu, and the title for the entry will be updated in the “Previous Entries” list if the user did so.
-- If you no longer want to make changes to the entry, select the “Discard Changes” button.
+    - If you no longer want to make changes to the entry, select the “Discard Changes” button.
 
 ### Deleting an Entry
 - To delete an entry, click on an existing entry from the main screen.
