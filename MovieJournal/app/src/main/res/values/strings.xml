@@ -2,4 +2,5 @@
     <string name="app_name">MovieJournal</string>
     <string name="movieName">Movie Name</string>
     <string name="movieJournalEntry">Journal Entry</string>
+    <string name="title_activity_new_entry">NewEntryActivity</string>
 </resources>

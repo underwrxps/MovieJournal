@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -56,6 +57,27 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return insert != -1;
     }
 
+
+    // idk what's going on here, but the query works and updates the table, but the cursor.moveToFirst comes back as false so idk whats up with that.
+    public boolean editEntry(int entryID, String movieName, String reviewText) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String queryString = String.format("UPDATE %s SET (%s, %s) = ('%s', '%s') WHERE %s = %s", JOURNAL_TABLE, COLUMN_MOVIE_NAME, COLUMN_REVIEW_TEXT, movieName, reviewText, COLUMN_ID, entryID);
+
+        Cursor cursor = db.rawQuery(queryString, null);
+
+        if (cursor.moveToFirst()) {
+            db.close();
+            cursor.close();
+            return true;
+        }
+        else {
+            db.close();
+            cursor.close();
+            return false;
+        }
+    }
+
     // Method to delete an entry
     public boolean deleteEntry (JournalEntryModel journalEntry) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -77,19 +99,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             cursor.close();
             db.close();
 
-            return false;
-        }
-    }
-
-    // Method to update an existing entry for a movie. Takes in a JournalEntryModel object. That object should have the movie name be the same
-    // as the one we are trying to update. The @reviewText of the object will be the new entry
-    public boolean updateEntry(JournalEntryModel journalEntry) {
-        if (deleteEntry(journalEntry)) {
-            // Return true if the old entry for the movie was successfully deleted and the new entry was successfully added. Otherwise return false
-            return addEntry(journalEntry);
-        }
-        else {
-            // A journal entry doesn't exist for that movie name
             return false;
         }
     }

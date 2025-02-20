@@ -1,5 +1,6 @@
 package com.example.moviejournal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,14 +23,18 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     // references to buttons and other controls on the layout
     TextView tv_title;
-    Button btn_newEntry, btn_showEntries;
-    EditText et_movieName, mlt_movieJournalEntry;
+    Button btn_newEntry;
     ListView lv_previousEntries;
-
     DataBaseHelper dataBaseHelper;
     ArrayAdapter entriesArrayAdapter;
 
     int entryIDCounter = 0;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ShowAllEntriesInListView(dataBaseHelper);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         tv_title = findViewById(R.id.tv_title);
         btn_newEntry = findViewById(R.id.btn_newEntry);
-        btn_showEntries = findViewById(R.id.btn_showEntries);
-        et_movieName = findViewById(R.id.et_movieName);
-        mlt_movieJournalEntry = findViewById(R.id.mlt_movieJournalEntry);
         lv_previousEntries = findViewById(R.id.lv_previousEntries);
 
         dataBaseHelper = new DataBaseHelper(MainActivity.this);
@@ -56,29 +58,9 @@ public class MainActivity extends AppCompatActivity {
         btn_newEntry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                JournalEntryModel jeModel;
-                try {
-                    jeModel = new JournalEntryModel(entryIDCounter, et_movieName.getText().toString(), mlt_movieJournalEntry.getText().toString());
-                    entryIDCounter++;
-                    Toast.makeText(MainActivity.this, jeModel.toString(), Toast.LENGTH_SHORT).show();
-                }
-                catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "Error adding entry", Toast.LENGTH_SHORT).show();
-                    jeModel = new JournalEntryModel(-1, "ERROR", "ERROR");
-                }
-
-                DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
-                boolean success = dataBaseHelper.addEntry(jeModel);
-                Toast.makeText(MainActivity.this, "Success = " + success, Toast.LENGTH_SHORT).show();
-                ShowAllEntriesInListView(dataBaseHelper);
-            }
-        });
-
-        btn_showEntries.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
-                ShowAllEntriesInListView(dataBaseHelper);
+                // launch new entry activity
+                Intent intent = new Intent(MainActivity.this, NewEntryActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -86,9 +68,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 JournalEntryModel clickedEntry = (JournalEntryModel) parent.getItemAtPosition(position);
-                dataBaseHelper.deleteEntry(clickedEntry);
-                ShowAllEntriesInListView(dataBaseHelper);
-                Toast.makeText(MainActivity.this, "Deteled " + clickedEntry.toString(), Toast.LENGTH_SHORT).show();
+                Bundle b = new Bundle();
+                b.putInt("entryID", clickedEntry.getEntryID());
+                b.putString("movieName", clickedEntry.getMovieName());
+                b.putString("reviewText", clickedEntry.getReviewText());
+                Intent intent = new Intent(MainActivity.this, EditOrDeleteActivity.class);
+                intent.putExtras(b);
+                startActivity(intent);
             }
         });
     }
