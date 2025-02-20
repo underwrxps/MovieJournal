@@ -25,7 +25,7 @@
 7. [PPT Slideshow](/FallDesignPresentationSlides.pdf)
 
 8. Self-Assessment Essays
-    1. [Zach Cunningham](/ZachCuningham_IndividualCaptoneAssessment.pdf)
+    1. [Zach Cunningham](/ZachCunningham_IndividualCapstoneAssessment.pdf)
     2. [Nate Hoffman](/NateHoffman_IndividualCapstoneAssessment.docx)
 
 9. Professional Biographies
@@ -37,4 +37,6 @@
     2. There is a planned future expense of $25 to add the finished application to the android app store. The funds for this expense will be provided by the two group members.
     
 11. Appendix
-    1. [Code Repository](/MovieJournal)
+    1. [Code Repository](MovieJournal/app/src/main/java/com/example/moviejournal)
+    2. Refrences
+        1. [SQLite Databse for Android - Full Course](https://www.youtube.com/watch?v=312RhjfetP8)
