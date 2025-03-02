@@ -66,11 +66,23 @@ public class EditOrDeleteActivity extends AppCompatActivity {
         btn_deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DataBaseHelper dataBaseHelper = new DataBaseHelper(EditOrDeleteActivity.this);
-                JournalEntryModel entryToDelete = dataBaseHelper.getSingleEntry(movieName);
-                dataBaseHelper.deleteEntry(entryToDelete);
-                Toast.makeText(EditOrDeleteActivity.this, "Deleted entry for " + movieName, Toast.LENGTH_SHORT).show();
-                finish();
+                // Create a confirmation dialog
+                new androidx.appcompat.app.AlertDialog.Builder(EditOrDeleteActivity.this)
+                        .setTitle("Confirm Deletion")
+                        .setMessage("Are you sure you want to delete this entry?")
+                        .setPositiveButton("Delete", (dialog, which) -> {
+                            // User confirmed deletion
+                            DataBaseHelper dataBaseHelper = new DataBaseHelper(EditOrDeleteActivity.this);
+                            JournalEntryModel entryToDelete = dataBaseHelper.getSingleEntry(movieName);
+                            dataBaseHelper.deleteEntry(entryToDelete);
+                            Toast.makeText(EditOrDeleteActivity.this, "Deleted entry for " + movieName, Toast.LENGTH_SHORT).show();
+                            finish();
+                        })
+                        .setNegativeButton("Cancel", (dialog, which) -> {
+                            // User canceled, do nothing
+                            dialog.dismiss();
+                        })
+                        .show();
             }
         });
 
