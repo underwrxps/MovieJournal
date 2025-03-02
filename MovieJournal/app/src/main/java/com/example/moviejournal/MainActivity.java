@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         dataBaseHelper = new DataBaseHelper(MainActivity.this);
         // Initialize sorting options
         ArrayAdapter<String> sortAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,
-                new String[]{"Alphabetically", "Date Created (New to Old)", "Date Created (Old to New)"});
+                new String[]{"Alphabetically (A - Z)", "Alphabetically (Z - A)", "Date Created (New to Old)", "Date Created (Old to New)"});
         sp_sortOptions.setAdapter(sortAdapter);
 
         updateListView();

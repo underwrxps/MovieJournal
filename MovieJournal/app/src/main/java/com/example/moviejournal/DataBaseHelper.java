@@ -108,8 +108,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         List<JournalEntryModel> returnList = new ArrayList<>();
         String queryString = "SELECT * FROM " + JOURNAL_TABLE;
 
-        if (sortOrder.equals("Alphabetically")) {
-            queryString += " ORDER BY " + COLUMN_MOVIE_NAME + " ASC";
+        if (sortOrder.equals("Alphabetically (A - Z)")) {
+            queryString += " ORDER BY LOWER(" + COLUMN_MOVIE_NAME + ") ASC"; // Case-insensitive A-Z
+        } else if (sortOrder.equals("Alphabetically (Z - A)")) {
+            queryString += " ORDER BY LOWER(" + COLUMN_MOVIE_NAME + ") DESC"; // Case-insensitive Z-A
         } else if (sortOrder.equals("Date Created (New to Old)")) {
             queryString += " ORDER BY " + COLUMN_ID + " DESC";
         } else if (sortOrder.equals("Date Created (Old to New)")) {
