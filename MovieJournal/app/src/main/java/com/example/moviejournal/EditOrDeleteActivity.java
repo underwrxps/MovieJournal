@@ -17,7 +17,7 @@ public class EditOrDeleteActivity extends AppCompatActivity {
 
     TextView tv_viewEntryMovieName, tv_viewEntryJournalEntry;
 
-    Button btn_editButton, btn_deleteButton;
+    Button btn_editButton, btn_deleteButton, btn_cancelButton;
 
     int entryID;
     String movieName, reviewText;
@@ -35,6 +35,7 @@ public class EditOrDeleteActivity extends AppCompatActivity {
 
         btn_editButton = findViewById(R.id.btn_editButton);
         btn_deleteButton = findViewById(R.id.btn_deleteButton);
+        btn_cancelButton = findViewById(R.id.btn_cancelButton);
         tv_viewEntryMovieName = findViewById(R.id.tv_viewEntryMovieName);
         tv_viewEntryJournalEntry = findViewById(R.id.tv_viewEntryJournalEntry);
         tv_viewEntryJournalEntry.setMovementMethod(new android.text.method.ScrollingMovementMethod());
@@ -83,6 +84,15 @@ public class EditOrDeleteActivity extends AppCompatActivity {
                             dialog.dismiss();
                         })
                         .show();
+            }
+        });
+
+        // Cancel Button Click Listener
+        btn_cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close activity without saving
+                finish();
             }
         });
 

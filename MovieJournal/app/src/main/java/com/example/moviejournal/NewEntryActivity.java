@@ -20,6 +20,7 @@ public class NewEntryActivity extends AppCompatActivity {
 
     EditText et_newEntryMovieName, et_newEntryJournalEntry;
 
+    Button btn_cancelEntryButton;
     Button btn_saveEntryButton;
 
     @Override
@@ -33,11 +34,21 @@ public class NewEntryActivity extends AppCompatActivity {
             return insets;
         });
 
+        btn_cancelEntryButton = findViewById(R.id.btn_newEntryCancel);
         btn_saveEntryButton = findViewById(R.id.btn_newEntrySaveEntryButton);
         tv_newEntryTitle = findViewById(R.id.tv_newEntryTitle);
         et_newEntryMovieName = findViewById(R.id.et_newEntryMovieName);
         et_newEntryJournalEntry = findViewById(R.id.et_newEntryJournalEntry);
 
+
+        // Cancel Button Click Listener
+        btn_cancelEntryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close activity without saving
+                finish();
+            }
+        });
 
         // button listener for save entry button
         btn_saveEntryButton.setOnClickListener(new View.OnClickListener() {

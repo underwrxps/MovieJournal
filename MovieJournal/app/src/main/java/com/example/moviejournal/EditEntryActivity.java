@@ -18,6 +18,7 @@ public class EditEntryActivity extends AppCompatActivity {
 
     EditText et_editEntryMovieName, et_editEntryJournalEntry;
 
+    Button btn_cancelEntryButton;
     Button btn_saveEntryButton;
 
     int entryID;
@@ -34,6 +35,7 @@ public class EditEntryActivity extends AppCompatActivity {
             return insets;
         });
 
+        btn_cancelEntryButton = findViewById(R.id.btn_editEntryCancel);
         btn_saveEntryButton = findViewById(R.id.btn_editEntrySaveEntryButton);
         tv_editEntryTitle = findViewById(R.id.tv_editEntryTitle);
         et_editEntryMovieName = findViewById(R.id.et_editEntryMovieName);
@@ -49,6 +51,15 @@ public class EditEntryActivity extends AppCompatActivity {
 
         et_editEntryMovieName.setText(movieName);
         et_editEntryJournalEntry.setText(reviewText);
+
+        // Cancel Button Click Listener
+        btn_cancelEntryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close activity without saving
+                finish();
+            }
+        });
 
         // button listener for save entry button
         btn_saveEntryButton.setOnClickListener(new View.OnClickListener() {
