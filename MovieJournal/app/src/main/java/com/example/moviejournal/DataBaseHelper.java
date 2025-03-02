@@ -104,38 +104,43 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     // Method to get all the entries in the database
-    public List<JournalEntryModel> getAllEntries() {
+    public List<JournalEntryModel> getAllEntries(String sortOrder) {
         List<JournalEntryModel> returnList = new ArrayList<>();
-
-        // Query string for the database
         String queryString = "SELECT * FROM " + JOURNAL_TABLE;
-        SQLiteDatabase db = this.getReadableDatabase();
 
-        // The query returns a cursor which is basically a collection of data
+        if (sortOrder.equals("Alphabetically")) {
+            queryString += " ORDER BY " + COLUMN_MOVIE_NAME + " ASC";
+        } else if (sortOrder.equals("Date Created (New to Old)")) {
+            queryString += " ORDER BY " + COLUMN_ID + " DESC";
+        } else if (sortOrder.equals("Date Created (Old to New)")) {
+            queryString += " ORDER BY " + COLUMN_ID + " ASC";
+        }
+
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(queryString, null);
 
-        // If the entries are successfully extracted from the database
         if (cursor.moveToFirst()) {
-            // Iterate through all the entries
             do {
                 int entryID = cursor.getInt(0);
                 String movieName = cursor.getString(1);
                 String reviewText = cursor.getString(2);
-
-                JournalEntryModel newJournalEntry = new JournalEntryModel(entryID, movieName, reviewText);
-                returnList.add(newJournalEntry);
-
+                returnList.add(new JournalEntryModel(entryID, movieName, reviewText));
             } while (cursor.moveToNext());
         }
-        else {
-            // The query failed. Don't add anything
-        }
 
-        // Clean up
         cursor.close();
         db.close();
-
         return returnList;
+    }
+
+    public List<JournalEntryModel> searchEntries(String query, List<JournalEntryModel> allEntries) {
+        List<JournalEntryModel> filteredList = new ArrayList<>();
+        for (JournalEntryModel entry : allEntries) {
+            if (entry.getMovieName().toLowerCase().contains(query.toLowerCase())) {
+                filteredList.add(entry);
+            }
+        }
+        return filteredList;
     }
 
     // Method to get a single journal entry from the database
