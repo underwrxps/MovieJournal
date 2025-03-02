@@ -37,6 +37,7 @@ public class EditOrDeleteActivity extends AppCompatActivity {
         btn_deleteButton = findViewById(R.id.btn_deleteButton);
         tv_viewEntryMovieName = findViewById(R.id.tv_viewEntryMovieName);
         tv_viewEntryJournalEntry = findViewById(R.id.tv_viewEntryJournalEntry);
+        tv_viewEntryJournalEntry.setMovementMethod(new android.text.method.ScrollingMovementMethod());
 
         Bundle b = getIntent().getExtras();
         if (b != null)
