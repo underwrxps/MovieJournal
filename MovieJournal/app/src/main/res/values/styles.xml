@@ -1,10 +1,11 @@
 <resources>
+    <!-- Modern Rounded Button Style with Cyan Accent -->
     <style name="RoundedButton">
-        <item name="android:backgroundTint">#6200EE</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="shapeAppearanceOverlay">@style/RoundedShape</item>
+        <item name="android:backgroundTint">#00BCD4</item>  <!-- Cyan -->
+        <item name="android:textColor">#121212</item>  <!-- Dark text for contrast -->
         <item name="android:elevation">4dp</item>
         <item name="android:padding">12dp</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedShape</item>
     </style>
 
     <style name="RoundedShape">

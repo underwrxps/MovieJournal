@@ -1,11 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Dark Theme -->
     <style name="Theme.MovieJournal" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">#6200EE</item>  
-        <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorSecondary">#03DAC5</item>
-        <item name="android:colorBackground">#121212</item>  
+        <item name="colorPrimary">#00BCD4</item>  <!-- Cyan Accent -->
+        <item name="colorPrimaryVariant">#008BA3</item>  <!-- Deeper Cyan -->
+        <item name="colorOnPrimary">#121212</item>  <!-- Dark Text on Cyan -->
+        <item name="colorSecondary">#00ACC1</item>  <!-- Slightly lighter Cyan -->
+        <item name="android:colorBackground">#121212</item>  <!-- Dark Background -->
         <item name="android:windowBackground">#121212</item>
-        <item name="android:textColor">#E0E0E0</item>
+        <item name="android:textColor">#E0E0E0</item>  <!-- Light Text -->
     </style>
 </resources>
