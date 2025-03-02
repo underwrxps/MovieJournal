@@ -1,5 +1,6 @@
 package com.example.moviejournal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,8 +57,16 @@ public class EditEntryActivity extends AppCompatActivity {
         btn_cancelEntryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Close activity without saving
-                finish();
+                // Navigate back to the View Entry (EditOrDeleteActivity)
+                Intent intent = new Intent(EditEntryActivity.this, EditOrDeleteActivity.class);
+
+                // Pass back the same entry details so it can be displayed
+                intent.putExtra("entryID", entryID);
+                intent.putExtra("movieName", et_editEntryMovieName.getText().toString());
+                intent.putExtra("reviewText", et_editEntryJournalEntry.getText().toString());
+
+                startActivity(intent); // Open View Entry Page
+                finish(); // Close Edit Entry Page
             }
         });
 
