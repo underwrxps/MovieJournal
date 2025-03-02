@@ -31,7 +31,13 @@
         android:layout_height="wrap_content"
         android:hint="Search by title..."
         android:padding="8dp"
-        android:background="@android:drawable/editbox_background"
+        android:background="@drawable/edittext_background"
+        android:textColor="#E0E0E0"
+        android:textColorHint="#888888"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
         android:inputType="text"
         android:drawableLeft="@android:drawable/ic_menu_search"
         android:paddingLeft="10dp"
@@ -72,6 +78,7 @@
     <!-- New Entry Button -->
     <Button
         android:id="@+id/btn_newEntry"
+        style="@style/RoundedButton"
         android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_marginTop="8dp"
