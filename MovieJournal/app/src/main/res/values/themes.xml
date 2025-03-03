@@ -1,12 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Dark Theme -->
+    <!-- Dark Theme with Lighter Background -->
     <style name="Theme.MovieJournal" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">#00BCD4</item>  <!-- Cyan Accent -->
         <item name="colorPrimaryVariant">#008BA3</item>  <!-- Deeper Cyan -->
         <item name="colorOnPrimary">#121212</item>  <!-- Dark Text on Cyan -->
         <item name="colorSecondary">#00ACC1</item>  <!-- Slightly lighter Cyan -->
-        <item name="android:colorBackground">#121212</item>  <!-- Dark Background -->
-        <item name="android:windowBackground">#121212</item>
-        <item name="android:textColor">#E0E0E0</item>  <!-- Light Text -->
+
+        <!-- Lighter Dark Background -->
+        <item name="android:colorBackground">#2E2E2E</item>  <!-- Lighter Gray instead of Pure Black -->
+        <item name="android:windowBackground">#2E2E2E</item>  <!-- Slightly lighter than default dark mode -->
+        <item name="colorSurface">#383838</item>  <!-- For Card-like elements -->
+        <item name="android:textColor">#E0E0E0</item>  <!-- Light Text for contrast -->
     </style>
 </resources>
