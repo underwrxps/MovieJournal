@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.moviejournal"
+    namespace = "com.mjapp.moviejournal"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.moviejournal"
+        applicationId = "com.mjapp.moviejournal"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

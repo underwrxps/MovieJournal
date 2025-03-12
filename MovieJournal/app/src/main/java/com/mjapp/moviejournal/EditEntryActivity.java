@@ -1,4 +1,4 @@
-package com.example.moviejournal;
+package com.mjapp.moviejournal;
 
 import android.content.Intent;
 import android.os.Bundle;
