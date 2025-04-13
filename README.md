@@ -33,6 +33,7 @@
     1. [Zach Cunningham (Fall)](/ZachCunningham_IndividualCapstoneAssessment.pdf)
     2. [Zach Cunningham (Spring)](/ZachCunningham_SelfAssessment.pdf)
     3. [Nate Hoffman (Fall)](/NateHoffman_IndividualCapstoneAssessment.docx)
+    4. [NateHoffman (Spring)](/NateHoffman_SelfAssessment.pdf)
 
 11. Professional Biographies
     1. [Zach Cunningham](/ZachCunningham_ProfessionalBiography.md)
