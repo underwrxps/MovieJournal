@@ -36,11 +36,13 @@
 11. Professional Biographies
     1. [Zach Cunningham](/ZachCunningham_ProfessionalBiography.md)
     2. [Nate Hoffman](/NateHoffman_ProfessionalBiography.md)
+   
+12. Summary of Hours and Justification
 
-12. Budget
+13. Budget
     1. $25 fee for creating a developer account with Google Play, supplied by both developers.
     
-13. Appendix
+14. Appendix
     1. [Code Repository](MovieJournal/app/src/main/java/com/example/moviejournal)
     2. Refrences
         1. [SQLite Databse for Android - Full Course](https://www.youtube.com/watch?v=312RhjfetP8)
