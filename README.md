@@ -15,27 +15,32 @@
 4. User Stories and Design Diagrams
     1. [User Stories](/User_Stories.md)
     2. [Design Diagrams](/Design_Diagrams/MovieJournal_DesignDiagrams.pdf)
+  
+5. [Test Plan with Results](/MovieJournal_TestPlanWithResults.pdf)
 
-5. Project Tasks and Timeline
+6. Project Tasks and Timeline
     1. [Task List](/Tasklist.md)
     2. [Milestones, Timline, & Effort Matrix](/MovieJournal_Milestones_Timeline_EffortMatrix.pdf)
 
-6. [ABET Concerns Essay](/MovieJournal_ConstraintsEssay.pdf)
+7. [ABET Concerns Essay](/MovieJournal_ConstraintsEssay.pdf)
 
-7. [PPT Slideshow](/FallDesignPresentationSlides.pdf)
+8. [PPT Slideshow](/FallDesignPresentationSlides.pdf)
 
-8. Self-Assessment Essays
-    1. [Zach Cunningham](/ZachCunningham_IndividualCapstoneAssessment.pdf)
-    2. [Nate Hoffman](/NateHoffman_IndividualCapstoneAssessment.docx)
+9. [Expo Poster](/MovieJournal_Poster.pdf)
 
-9. Professional Biographies
+10. Self-Assessment Essays
+    1. [Zach Cunningham (Fall)](/ZachCunningham_IndividualCapstoneAssessment.pdf)
+    2. [Zach Cunningham (Spring)](/ZachCunningham_SelfAssessment.pdf)
+    3. [Nate Hoffman](/NateHoffman_IndividualCapstoneAssessment.docx)
+
+11. Professional Biographies
     1. [Zach Cunningham](/ZachCunningham_ProfessionalBiography.md)
     2. [Nate Hoffman](/NateHoffman_ProfessionalBiography.md)
 
-10. Budget
+12. Budget
     1. $25 fee for creating a developer account with Google Play, supplied by both developers.
     
-11. Appendix
+13. Appendix
     1. [Code Repository](MovieJournal/app/src/main/java/com/example/moviejournal)
     2. Refrences
         1. [SQLite Databse for Android - Full Course](https://www.youtube.com/watch?v=312RhjfetP8)
