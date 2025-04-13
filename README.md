@@ -1,4 +1,5 @@
-# Table of Conetents
+# Final Design Report
+## Table of Contents
 
 1. Team Names
     1. Members
