@@ -37,7 +37,7 @@
     1. [Zach Cunningham](/ZachCunningham_ProfessionalBiography.md)
     2. [Nate Hoffman](/NateHoffman_ProfessionalBiography.md)
    
-12. Summary of Hours and Justification
+12. [Summary of Hours and Justification (Both Members)](/MovieJournal_SummaryOfHours.pdf)
 
 13. Budget
     1. $25 fee for creating a developer account with Google Play, supplied by both developers.
