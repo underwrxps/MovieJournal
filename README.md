@@ -33,8 +33,7 @@
     2. [Nate Hoffman](/NateHoffman_ProfessionalBiography.md)
 
 10. Budget
-    1. As of now there have been no monetary expenses for this project. 
-    2. There is a planned future expense of $25 to add the finished application to the android app store. The funds for this expense will be provided by the two group members.
+    1. $25 fee for creating a developer account with Google Play, supplied by both developers.
     
 11. Appendix
     1. [Code Repository](MovieJournal/app/src/main/java/com/example/moviejournal)
