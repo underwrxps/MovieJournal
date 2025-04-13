@@ -9,7 +9,9 @@
 7. Develop the functionality to update a previous entry: Nate.
 8. Develop the functionality to delete a previous entry: Zach.
 9. Develop the gui for the app : Zach.
-10. Develop the personal details section of the app : Nate.
 11. Verify the app has met the requirements set : Nate.
 12. Test the app to find any bugs : Zach and Nate.
-13. Upload a prototype of the app : Zach.
+13. Build app bundle of prototype : Zach.
+14. Upload app bundle and start closed testing : Zach.
+15. Create Google Play Store page and images: Zach and Nate.
+16. Update activities with findings from closed testing : Nate.
